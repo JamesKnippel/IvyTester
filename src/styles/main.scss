@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+// ABSTRACTS
+@import "abstracts/_functions.scss";
+@import "abstracts/_mixins.scss";
+@import "abstracts/_variables.scss";
+
+// BASE
+@import "base/_animations.scss";
+@import "base/_base.scss";
+@import "base/_typography.scss";
+@import "base/_utilities.scss";
+
+// LAYOUT

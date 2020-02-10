@@ -1,0 +1,30 @@
+// FONT
+$default-font-size: 1.6rem;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; //1200px
+$bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //600px
+$bp-smallest: 31.25em; //500px
+
+$color-primary: #969df5;
+$color-primary-light:#c5cdf6;
+$color-primary-dark: #485194;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-dark: #777;
+$color-grey-dark-1: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-alert: red;
+$danger-1: #cd5c5c; // 'indianred'
+$danger-2: #b22222; // 'firebrick'
+// lightened 10%
+$danger-1-light: #e77676;
+$danger-2-light: #cc3c3c;

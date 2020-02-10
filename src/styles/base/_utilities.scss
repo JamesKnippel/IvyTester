@@ -1,0 +1,123 @@
+@import '../styles/abstracts/_variables.scss';
+@import '../styles/base/_animations.scss';
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+
+  &-negative {
+    margin-bottom: -1.5rem !important;
+  }
+}
+
+.u-margin-top-small {
+  margin-top: 1.5rem !important;
+}
+
+.u-margin-top-medium {
+  margin-top: 4rem !important;
+
+  @include respond(tab-port) {
+    margin-top: 5rem !important;
+  }
+}
+
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+
+.u-padding-top-medium {
+  padding-top: 4rem !important;
+}
+
+.u-alert {
+  font-size: 2.1rem;
+  font-weight: 300;
+  border-radius: .4rem;
+  padding: 1rem;
+  // text-transform: uppercase;
+  animation: moveInRight .5s ease-out;
+
+  &--input {
+    margin-left: 2rem;
+    margin-top: .7rem;
+  }
+
+  &--success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+  }
+
+  &--warn {
+    color: #ff6e00;
+    background-color: #ff954787;
+  }
+
+  &--danger {
+    color: $color-alert;
+    background-color: #f8e3e3;
+    // border-color: #ebccd1;
+  }
+}
+
+.u-disabled {
+  cursor: not-allowed;
+}
+
+.u-full-width {
+  width: 100%;
+}
+
+.button.is-loading::after,
+.select.is-loading::after,
+.control.is-loading::after,
+.loader {
+  -webkit-animation: spinAround 500ms infinite linear;
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid $color-grey-light-1;
+  border-radius: 290486px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+  margin-bottom: 1rem;
+}
+
+.button.is-loading {
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.button.is-loading::after {
+  // position: absolute;
+  left: calc(50% - (1em / 2));
+  // top: calc(50% - (1em / 2));
+  // position: absolute !important;
+}
