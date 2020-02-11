@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="column-left">
+    hello
+  </div>
+
+
+  <div class="column-right">
+    <section class="section-start">
+      <div class="row">
+        <div class="start">
+          <div class="start__form">
+            <form action="#" class="form">
+              <div class="u-center-text u-margin-bottom-medium">
+                <h2 class="heading-secondary">
+                  Stay in touch for our upcoming news!
+                </h2>
+              </div>
+    
+              <div class="form__group">
+                <input [(ngModel)]="name" name="name" type="text" class="form__input form__input--small"
+                  placeholder="Full Name" id="name" required>
+                <label for="name" class="form__label">Full Name</label>
+              </div>
+              <div class="form__group">
+                <input [(ngModel)]="email" name="email" type="email" class="form__input form__input--small"
+                  placeholder="Email Address" id="email" required>
+                <label for="email" class="form__label">Email Address</label>
+              </div>
+    
+              <p class="paragraph u-margin-bottom-medium">
+                We respect your privacy, and will keep any messages to a minimum.
+              </p>
+    
+              <div class="form__group">
+                <button class="btn btn--dark" (click)="subscribe(this.name, this.email);" *ngIf="!this.subscribed">
+                  Next Step &rarr;
+                </button>
+                <p class="paragraph u-margin-bottom-medium" *ngIf="this.subscribed">
+                  Thank you for subscribing!
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</div>

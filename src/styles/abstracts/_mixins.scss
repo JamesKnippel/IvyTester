@@ -15,6 +15,39 @@
   transform: translate(-50%, -50%);
 }
 
+// GRADIENTS
+@mixin gradient-primary {
+  background-image: linear-gradient(to right bottom, $gradient-1, $gradient-2);
+}
+
+@mixin gradient-primary-reverse {
+  background-image: linear-gradient(to right bottom, $gradient-2, $gradient-1);
+}
+
+@mixin gradient-primary-light {
+  background-image: linear-gradient(to right bottom, $gradient-1-light, $gradient-2-light);
+}
+
+@mixin gradient-primary-light-reverse {
+  background-image: linear-gradient(to right bottom, $gradient-2-light, $gradient-1-light);
+}
+
+@mixin gradient-danger {
+  background-image: linear-gradient(to right bottom, $danger-1, $danger-2);
+}
+
+@mixin gradient-danger-reverse {
+  background-image: linear-gradient(to right bottom, $danger-2, $danger-1);
+}
+
+@mixin gradient-danger-light {
+  background-image: linear-gradient(to right bottom, $danger-1-light, $danger-2-light);
+}
+
+@mixin gradient-danger-light-reverse {
+  background-image: linear-gradient(to right bottom, $danger-2-light, $danger-1-light);
+}
+
 // MEDIA QUERIES
 /*
 0 - 600px: Phone;

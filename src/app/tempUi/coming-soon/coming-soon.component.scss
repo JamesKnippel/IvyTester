@@ -1,0 +1,76 @@
+@import '~src/styles/abstracts/_variables';
+@import '~src/styles/abstracts/_mixins';
+
+.container {
+  display: grid;
+  grid-template-columns: [col-start] 50% [col-mid] 50% [col-end];
+  grid-auto-rows: 100vh;
+  grid-template-rows: 100vh;
+}
+
+.column-left {
+  background-color: $color-grey-light-1;
+  grid-column: col-start / col-mid;
+  grid-row: 1 / -1;
+}
+
+.column-right {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+  background-color: $color-white;
+  grid-column: col-mid / col-end;
+  grid-row: 1 / -1;
+
+}
+
+
+.section-start {
+  background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
+
+.start {
+  // background-image: linear-gradient(105deg,
+  //     rgba($color-white, .9) 0%,
+  //     rgba($color-white, .9) 50%,
+  //     transparent 50%),
+  //   url(../../../../assets/img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+
+
+  // @include respond(tab-land) {
+  //   background-image: linear-gradient(105deg,
+  //       rgba($color-white, .9) 0%,
+  //       rgba($color-white, .9)65%,
+  //       transparent 65%),
+  //     url(../../../../assets/img/nat-10.jpg);
+  //   background-size: cover;
+  // }
+
+  @include respond(tab-port) {
+    // background-image: linear-gradient(to right,
+    //     rgba($color-white, .9) 0%,
+    //     rgba($color-white, .9)100%),
+    //   url(../../../../assets/img/nat-10.jpg);
+  }
+
+  &__form {
+    width: 100%;
+    padding: 4rem;
+
+    @include respond(tab-land) {
+      width: 65%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+}

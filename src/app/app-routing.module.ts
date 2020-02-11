@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ComingSoonComponent } from '../app/tempUi/coming-soon/coming-soon.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: ComingSoonComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

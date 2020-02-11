@@ -1,0 +1,221 @@
+@import '../styles/abstracts/_variables.scss';
+@import '../styles/base/_animations.scss';
+/* Validation */
+
+.notification {
+  text-transform: uppercase;
+  animation: moveInRight .5s ease-out;
+}
+
+.red-text {
+  color: red;
+}
+
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__input {
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: #f5f7fd;
+    border: none;
+    width: 100%;
+    display: block;
+    transition: all .3s;
+    border-bottom: 3px solid transparent;
+
+    &--small {
+      width: 90%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    &:placeholder-shown+.form__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4rem);
+      // height: 0;
+    }
+
+    &:placeholder-shown.ng-touched.ng-invalid+.form__label,
+    &:placeholder-shown.force-invalid+.form__label {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      // height: auto;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $color-primary;
+      background-color: #dce4fb;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-alert;
+    }
+
+    &.ng-touched.ng-invalid,
+    &.force-invalid {
+      border-bottom: 3px solid $color-alert;
+      background-color: #f8e3e3;
+      color: $color-alert;
+    }
+
+    &.ng-touched.ng-invalid+.form__label,
+    &.force-invalid+.form__label {
+      color: $color-alert;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-2;
+    }
+  }
+
+  &__select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    // background: #f5f7fd url(../assets/img/SVG/arrow-down.svg) no-repeat;
+    background-size: 20px;
+    background-position: right 1rem center;
+    font-size: 2.1rem;
+    font-weight: 300;
+    font-family: inherit;
+    padding: 1.4rem 2rem;
+    border-radius: 2px;
+    border: none;
+    width: 100%;
+    display: block;
+    transition: all .3s;
+    border-bottom: 3px solid transparent;
+    text-align: left;
+    text-overflow: '';
+    outline: 0;
+    color: $color-grey-dark-2;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $color-primary;
+      background-color: #dce4fb;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-alert;
+    }
+
+    &.placeholder-shown+.form__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4rem);
+    }
+
+    &.ng-touched.ng-invalid,
+    &.ng-touched.force-invalid {
+      border-bottom: 3px solid $color-alert;
+      background-color: #bf03031c;
+      color: $color-alert;
+    }
+
+    &.ng-touched.ng-invalid+.form__label,
+    &.ng-touched.force-invalid+.form__label {
+      color: $color-alert;
+    }
+
+    &.placeholder-shown.ng-touched.ng-invalid+.form__label,
+    &.placeholder-shown.ng-touched.force-invalid+.form__label {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    &.ng-valid.ng-touched,
+    &.ng-valid.ng-untouched {
+      color: black;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-2;
+    }
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: $color-grey-dark-2;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block;
+    transition: all .3s;
+  }
+
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__radio-input {
+    opacity: 0;
+  }
+
+  &__radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+  }
+
+  &__radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $color-primary-light;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -.4rem;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary-light;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+  }
+
+  &__radio-input:checked~&__radio-label &__radio-button::after {
+    opacity: 1;
+  }
+
+  &__button {
+    background-color: $color-primary-dark;
+  }
+
+  &__button:disabled {
+    background-color: $color-primary;
+  }
+}

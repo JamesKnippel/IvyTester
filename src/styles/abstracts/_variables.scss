@@ -1,5 +1,9 @@
 // FONT
 $default-font-size: 1.6rem;
+$font-primary: 'Nunito',
+sans-serif;
+$font-display: 'Josefin Sans',
+sans-serif;
 
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; //1200px
@@ -8,9 +12,16 @@ $bp-medium: 56.25em; //900px
 $bp-small: 37.5em; //600px
 $bp-smallest: 31.25em; //500px
 
-$color-primary: #969df5;
-$color-primary-light:#c5cdf6;
-$color-primary-dark: #485194;
+// Note: referenced in 'mixins' file
+$gradient-1: #080006;
+$gradient-2: #000000;
+// lightened 10%
+$gradient-1-light: #020101;
+$gradient-2-light: #050407;
+
+$color-primary: #91ffc8;
+$color-primary-light:#4df09f;
+$color-primary-dark: #a4f7d7;
 
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
